@@ -1,5 +1,5 @@
 # Disposing-It
-Mobile app basd on AI &amp; AR frameworks 
+Mobile app basd on AI &amp; AR frameworks for React Native
 
 ## Installation
 
