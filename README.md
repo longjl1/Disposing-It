@@ -1,5 +1,5 @@
 # Disposing-It
-Mobile app basd on AI &amp; AR frameworks for React Native
+Mobile app basd on Tensorflow.js/ MobileNet and AR frameworks for React Native
 
 ## Set up
 
