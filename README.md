@@ -1,6 +1,9 @@
 # Disposing-It
 Mobile app basd on Tensorflow.js/ MobileNet and AR frameworks for React Native
 
+## Project vision statement
+“To increase the general knowledge and frequency of proper disposal habits using Augmented Reality”
+
 ## Set up
 
 Clone this repository and ```cd ```into the directory.
