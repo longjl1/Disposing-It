@@ -25,6 +25,16 @@ const linking: LinkingOptions<RootStackParamList> = {
               TabTwoScreen: 'two',
             },
           },
+          TabThree: {
+            screens: {
+              TabTwoScreen: 'three',
+            },
+          },
+          TabFour: {
+            screens: {
+              TabTwoScreen: 'four',
+            },
+          },
         },
       },
       Modal: 'modal',

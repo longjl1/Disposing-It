@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "detect-3",
-    "slug": "detect-3",
+    "name": "Dispose It",
+    "slug": "dispose-it",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -29,6 +29,7 @@
     },
     "web": {
       "favicon": "./assets/images/favicon.png"
-    }
+    },
+    "description": ""
   }
 }

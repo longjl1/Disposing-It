@@ -14,10 +14,15 @@ import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import ModalScreen from '../screens/ModalScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
-import TabOneScreen from '../screens/TabOneScreen';
-import TabTwoScreen from '../screens/TabTwoScreen';
+import ScanItem from '../screens/ScanItem';
+import LogScreen from '../screens/LogScreen';
+import HomeScreen from '../screens/HomeScreen';
+import TipsScreen from '../screens/TipsScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
+import { Ionicons } from '@expo/vector-icons';
+
+
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
@@ -61,13 +66,26 @@ function BottomTabNavigator() {
       initialRouteName="TabOne"
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme].tint,
+        
       }}>
       <BottomTab.Screen
         name="TabOne"
-        component={TabOneScreen}
-        options={({ navigation }: RootTabScreenProps<'TabOne'>) => ({
-          title: 'Tab One',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+        component={HomeScreen}
+        options={{
+          title: 'Home',
+          tabBarIcon: ({ color }) => <TabBarIcon name="home-outline" color={color} />,
+        }}
+        // tabBarActiveTintColor = 'tomato'
+        // tabBarInactiveTintColor = 'gray'
+      />
+      <BottomTab.Screen
+        name="TabTwo"
+        component={ScanItem}
+        options={({ navigation }: RootTabScreenProps<'TabTwo'>) => ({
+          title: 'Scan',
+          tabBarIcon: ({ color }) => (
+            <TabBarIcon name="scan-outline" color={color} />
+            ),
           headerRight: () => (
             <Pressable
               onPress={() => navigation.navigate('Modal')}
@@ -80,18 +98,29 @@ function BottomTabNavigator() {
                 color={Colors[colorScheme].text}
                 style={{ marginRight: 15 }}
               />
+              
             </Pressable>
           ),
         })}
       />
       <BottomTab.Screen
-        name="TabTwo"
-        component={TabTwoScreen}
+        name="TabThree"
+        component={LogScreen}
         options={{
-          title: 'Tab Two',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: 'History',
+          tabBarIcon: ({ color }) => <TabBarIcon name="file-tray-full-outline" color={color} />,
         }}
       />
+      
+      <BottomTab.Screen
+        name="TabFour"
+        component={TipsScreen}
+        options={{
+          title: 'Disposing Options',
+          tabBarIcon: ({ color }) => <TabBarIcon name="leaf-outline"  color={color} />,
+        }}
+      />
+      
     </BottomTab.Navigator>
   );
 }
@@ -100,8 +129,10 @@ function BottomTabNavigator() {
  * You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
  */
 function TabBarIcon(props: {
-  name: React.ComponentProps<typeof FontAwesome>['name'];
+  name: React.ComponentProps<typeof Ionicons>['name'];
   color: string;
 }) {
-  return <FontAwesome size={30} style={{ marginBottom: -3 }} {...props} />;
+  return (
+    <Ionicons size={30} style={{ marginBottom: -3 }} {...props} />
+  );
 }
