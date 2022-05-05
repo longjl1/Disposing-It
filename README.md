@@ -1,9 +1,13 @@
 # Disposing-It
 Mobile app basd on AI &amp; AR frameworks for React Native
 
-## Installation
+## Set up
 
-Use the npm or yarn to install the packages
+Clone this repository and ```bash cd ``` into the directory.
+
+In the terminal run:
+
+Use the npm or yarn to install
 
 ```bash
 yarn install
