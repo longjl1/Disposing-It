@@ -21,7 +21,8 @@ npm install
 
 ## Usage
 
-```yarn ios``` -- (react-native run-ios) Build the iOS App (requires a MacOS computer).
+```yarn ios``` -- (react-native run-ios) Build the iOS App (requires a MacOS computer).\n
+
 ```yarn android``` -- (react-native run-android) Build the Android App.
 <!-- yarn web -- (expo start:web) Run the website in your browser. -->
 
