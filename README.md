@@ -3,7 +3,7 @@ Mobile app basd on AI &amp; AR frameworks for React Native
 
 ## Set up
 
-Clone this repository and ```cd ```  into the directory.
+Clone this repository and ```cd ```into the directory.
 
 In the terminal run:
 
