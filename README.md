@@ -6,7 +6,7 @@ Mobile app basd on Tensorflow.js/ MobileNet and AR frameworks for React Native
 
 ## Demo
 
-![demo]
+![](https://github.com/longjl1/Disposing-It/blob/main/demo.gif)
 
 ## Set up
 
