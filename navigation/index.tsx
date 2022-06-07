@@ -15,13 +15,14 @@ import useColorScheme from '../hooks/useColorScheme';
 import ModalScreen from '../screens/ModalScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
 import ScanItem from '../screens/ScanItem';
-import LogScreen from '../screens/LogScreen';
+import DisposalSites from '../screens/DisposalSites';
 import HomeScreen from '../screens/HomeScreen';
 import TipsScreen from '../screens/TipsScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
 import { Ionicons } from '@expo/vector-icons';
-
+import Test_1  from '../screens/Test_1';
+import ItemLogged from '../screens/ItemLogged';
 
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
@@ -44,7 +45,10 @@ function RootNavigator() {
   return (
     <Stack.Navigator>
       <Stack.Screen name="Root" component={BottomTabNavigator} options={{ headerShown: false }} />
+      <Stack.Screen name="TabTwo" component={ScanItem} options={{ headerShown: true }} />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
+      <Stack.Screen name="Test_1" component={Test_1} options={{ headerShown: false, presentation: 'modal' }} />
+      <Stack.Screen name="ItemLogged" component={ItemLogged} options={{ headerShown: false, presentation: 'modal' }} />
       <Stack.Group screenOptions={{ presentation: 'modal' }}>
         <Stack.Screen name="Modal" component={ModalScreen} />
       </Stack.Group>
@@ -63,7 +67,7 @@ function BottomTabNavigator() {
 
   return (
     <BottomTab.Navigator
-      initialRouteName="TabOne"
+      initialRouteName="TabTwo"
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme].tint,
         
@@ -72,8 +76,8 @@ function BottomTabNavigator() {
         name="TabOne"
         component={HomeScreen}
         options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <TabBarIcon name="home-outline" color={color} />,
+          title: 'My Stats',
+          tabBarIcon: ({ color }) => <TabBarIcon name="pie-chart-outline" color={color} />,
         }}
         // tabBarActiveTintColor = 'tomato'
         // tabBarInactiveTintColor = 'gray'
@@ -105,21 +109,21 @@ function BottomTabNavigator() {
       />
       <BottomTab.Screen
         name="TabThree"
-        component={LogScreen}
+        component={DisposalSites}
         options={{
-          title: 'History',
-          tabBarIcon: ({ color }) => <TabBarIcon name="file-tray-full-outline" color={color} />,
+          title: 'Disposal Sites',
+          tabBarIcon: ({ color }) => <TabBarIcon name="map-outline" color={color} />,
         }}
       />
       
-      <BottomTab.Screen
+      {/* <BottomTab.Screen
         name="TabFour"
         component={TipsScreen}
         options={{
           title: 'Disposing Options',
           tabBarIcon: ({ color }) => <TabBarIcon name="leaf-outline"  color={color} />,
         }}
-      />
+      /> */}
       
     </BottomTab.Navigator>
   );

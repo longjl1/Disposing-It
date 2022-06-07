@@ -1,0 +1,89 @@
+{
+    "recyclable": {
+       "category": "Recyclable Item",
+       "discription": "Recycle clean bottles, cans,paper, and cardboard.",
+       "items": [
+        "plastic bottle","water bottle","bottle","paper","paper towels","frying pan","notebook","laptop","jar","jug"
+       ],
+       "class":{
+
+        "plastic":{
+            "id":["plastic","jar","nematode","water bottle"],
+            "rule": "Recycle plastics like empty bottles, jars, jugs, and tubs by their shapes. Chasing arrows don’t necessarily indicate recyclability",
+            "tips": "Caps are recyclable, but you must put them back on empty containers before tossing in the bin.",
+            "icon": "../assets/images/waterbottle.png"
+        },
+        "can":{
+            "id":["tin","aluminum","steel", "raditor"],
+            "rule": "Recycle all empty tin, aluminum, and steel cans.",
+            "tips": "Remove plastic lids from any food or beverage cans before recycling.",
+            "icon": "../assets/images/waterbottle.png"
+        },
+        "paper":{
+            "id":["paper"],
+            "rule": "Paper, newspaper, and magazines are good to recycle.",
+            "tips": "Soiled and wet paper should be placed in the trash.",
+            "icon": "../assets/images/waterbottle.png"
+
+        },
+        "carton":{
+            "id":["carton"],
+            "rule": "Flatten and recycle all cardboard and paperboard.",
+            "tips": "Break down and flatten cardboard boxes to make room for more materials to fit in your recycling. Be sure to close the lid on your recycling container to keep materials dry",
+            "icon": "../assets/images/waterbottle.png"
+        },
+        "glass":{
+            "id":["glass"],
+            "rule": "Glass recycling rules vary by city, county and state. If acceptable, make sure containers are empty",
+            "tips": "Check your local recycling program to confirm that glass is accepted in the curbside program.",
+            "icon": "../assets/images/waterbottle.png"
+       }
+     
+    }
+    
+    },
+
+    "landfill": {
+       "category": "Landfill Item",
+       "discription": "Acceptable Materials for Landfill: Plastic Bags, Paper Cups, Wrappers & Packets, Frozen Food Boxes, Styrofoam, Neon & Goldenrod Paper, Ceramics, Mirrors, Lightbulbs, & Glass Panes, Lab Glass & Pyrex, etc.",
+       "items": ["Rubber-soled", "clothing","shirt","sweatshirt","shoe","handbag", "plastic bag", "packet"
+        ],
+        "class":{
+            "plastic_bag":{
+                "id":["plastic bag", "packet"],
+                "rule": "Plastic Bags are a \"Hard to Recycle\" item and the bags need to be kept seperate, clean, and dry. Take bags to a special place for recycling: CHaRM, Grocery Stores, Home Depot",
+                "tips": "Do not put bags in your normal recycling bin because the bags get caught in recycling sorting equipment and cause machines to break/bind up. Avoid plastic bags and bring reusable bags wherever you go.",
+                "icon": "../assets/images/bagofchips.png"
+            }
+            
+        
+        }
+    },
+
+    "compost":{
+        "category": "Composting Item",
+        "discription": "Compost is organic material that can be added to soil to help plants grow. Food scraps and yard waste together currently make up more than 30 percent of what we throw away, and could be composted instead. Making compost keeps these materials out of landfills where they take up space and release methane, a potent greenhouse gas.",
+        "items":["food","apple","banana","egg","paper towels"],
+        "class":{
+            "food":{
+                "id":["food", "apple", "Leaves", "cucumber"],
+                "rule":"If you do not have space for an outdoor compost pile, you can compost materials indoors using a special type of bin, which you can buy at a local hardware store, gardening supplies store, or make yourself. Remember to tend your pile and keep track of what you throw in. ",
+                "tips":"Not to compost: Dairy products (e.g., butter, milk, sour cream, yogurt) and eggs*",
+                "icon":"../assets/images/cucumber.png"
+
+            },
+            "banana":{
+                "id":[ "banana"],
+                "rule":"Cut into smaller pieces before putting in your compost bin. This speeds up the composting process. Allow enough air to reach the compost bin by opening it, poking holes, or using an aerator",
+                "tips":"Don’t not leave the sticker on the fruit! Make sure to dispose of that in the landfill separately",
+                "icon":"../assets/images/banana.png"
+                
+                
+            }
+
+
+        }
+    }
+
+
+}

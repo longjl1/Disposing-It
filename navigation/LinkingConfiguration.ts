@@ -38,7 +38,10 @@ const linking: LinkingOptions<RootStackParamList> = {
         },
       },
       Modal: 'modal',
+      Test_1:'test_1',
+      ItemLogged:'itemLogged',
       NotFound: '*',
+     
     },
   },
 };

@@ -1,19 +1,56 @@
 import { StatusBar } from 'expo-status-bar';
-import { Platform, StyleSheet } from 'react-native';
+import { Platform, StyleSheet, TouchableOpacity } from 'react-native';
 
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-export default function ModalScreen() {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Modal</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="/screens/ModalScreen.tsx" />
 
-      {/* Use a light status bar on iOS to account for the black space above the modal */}
-      <StatusBar style={Platform.OS === 'ios' ? 'light' : 'auto'} />
+import { Modalize } from 'react-native-modalize';
+import React, { useRef } from 'react';
+
+
+export default function ModalScreen({ navigation }) {
+
+  const modalizeRef = useRef<Modalize>(null);
+
+  const onOpen = () => {
+    modalizeRef.current?.open();
+  };
+
+  const getData = () => ({
+
+  });
+
+  const renderItem = (item) => (
+    <View>
+      <Text>{item.heading}</Text>
     </View>
+  );
+
+
+
+  return (
+    
+
+    
+    <View style={styles.container}>
+
+      <TouchableOpacity onPress={onOpen}>
+        <Text>Open the modal</Text>
+      </TouchableOpacity>
+      <Modalize
+        ref={modalizeRef}
+        flatListProps={{
+          data: getData(),
+          renderItem: renderItem,
+          keyExtractor: item => item.heading,
+          showsVerticalScrollIndicator: false,
+        }}
+      />
+    </View>
+   
   );
 }
 
