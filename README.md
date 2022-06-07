@@ -2,7 +2,7 @@
 Mobile app basd on Tensorflow.js/ MobileNet and AR frameworks for React Native
 
 ## Project vision statement
-“To increase the general knowledge and frequency of proper disposal habits using Augmented Reality”
+“To increase the general knowledge and frequency of proper disposal habits using Augmented Reality and AI object recognition”
 
 ## Demo
 
