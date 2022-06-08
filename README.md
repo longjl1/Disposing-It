@@ -26,6 +26,25 @@ or
 ```bash
 npm install
 ```
+## Example code
+### Create a TensorFlow camera (live detection)
+View the code in ScanItem.tsx 
+ ''' ruby
+ <TensorCamera 
+                      style={styles.camera} 
+                      ref={cameraRef}
+                      onReady={handleCameraStream}
+                      type={Camera.Constants.Type.back}
+                      cameraTextureHeight={textureDims.height}
+                      cameraTextureWidth={textureDims.width}
+                      resizeHeight={200}
+                      resizeWidth={152}
+                      resizeDepth={3}
+                      autorender={true}
+                      useCustomShadersToResize = {false}
+                /> 
+ '''
+
 
 ## Usage
 
