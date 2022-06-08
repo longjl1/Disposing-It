@@ -29,8 +29,8 @@ npm install
 ## Example code
 ### Create a TensorFlow camera (live detection)
 View the code in ScanItem.tsx 
- ''' 
- <TensorCamera 
+ ```ruby
+  <TensorCamera 
                       style={styles.camera} 
                       ref={cameraRef}
                       onReady={handleCameraStream}
@@ -43,7 +43,7 @@ View the code in ScanItem.tsx
                       autorender={true}
                       useCustomShadersToResize = {false}
                 /> 
- '''
+ ```
 
 
 ## Usage
