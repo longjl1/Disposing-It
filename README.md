@@ -29,7 +29,7 @@ npm install
 ## Example code
 ### Create a TensorFlow camera (live detection)
 View the code in ScanItem.tsx 
- ''' ruby
+ ''' 
  <TensorCamera 
                       style={styles.camera} 
                       ref={cameraRef}
