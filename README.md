@@ -30,6 +30,9 @@ npm install
 ### Create a TensorFlow camera (live detection)
 View the code in ScanItem.tsx 
  ```ruby
+import { Camera } from 'expo-camera';
+import * as tf from "@tensorflow/tfjs";
+import { cameraWithTensors } from '@tensorflow/tfjs-react-native';
   <TensorCamera 
                       style={styles.camera} 
                       ref={cameraRef}
