@@ -60,33 +60,6 @@ import { cameraWithTensors } from '@tensorflow/tfjs-react-native';
             const objects = await net.classify(nextImageTensor);
             if(objects && objects.length > 0){
               setDetections(objects.map(object => object.className));
-         
-<!--               //only used in the demo
-                recyclableItem.forEach(element => {
-                  if(objects[0].className.includes(element)){
-                    setRecyclable(true);
-                    setCategory('Recyclable');
-                    setDes('Recycle clean bottles, cans,paper, and cardboard.');
-                  }
-                });
-                
-                composingItem.forEach(element => {
-                  if(objects[0].className.includes(element)){
-                    setRecyclable(true);
-                    setCategory('Composting');
-                    setDes("Compost is organic material that can be added to soil to help plants grow. Food scraps and yard waste together currently make up more than 30 percent of what we throw away, and could be composted instead. Making compost keeps these materials out of landfills where they take up space and release methane, a potent greenhouse gas.");
-                  }
-                });
-
-                landfilledItem.forEach(element => {
-                  if(objects[0].className.includes(element)){
-                    setRecyclable(true);
-                    setCategory('Landfill');
-                    setDes("Acceptable Materials for Landfill: Plastic Bags, Paper Cups, Wrappers & Packets, Frozen Food Boxes, Styrofoam, Neon & Goldenrod Paper, Ceramics, Mirrors, Lightbulbs, & Glass Panes, Lab Glass & Pyrex, etc.");
-                  }
-                });
-
-               setName(objects[0].className); -->
               // });
             }
             tf.dispose([nextImageTensor]);
