@@ -34,18 +34,18 @@ import { Camera } from 'expo-camera';
 import * as tf from "@tensorflow/tfjs";
 import { cameraWithTensors } from '@tensorflow/tfjs-react-native';
   <TensorCamera 
-                      style={styles.camera} 
-                      ref={cameraRef}
-                      onReady={handleCameraStream}
-                      type={Camera.Constants.Type.back}
-                      cameraTextureHeight={textureDims.height}
-                      cameraTextureWidth={textureDims.width}
-                      resizeHeight={200}
-                      resizeWidth={152}
-                      resizeDepth={3}
-                      autorender={true}
-                      useCustomShadersToResize = {false}
-                /> 
+    style={styles.camera} 
+    ref={cameraRef}
+    onReady={handleCameraStream}  
+    type={Camera.Constants.Type.back}
+    cameraTextureHeight={textureDims.height}
+    cameraTextureWidth={textureDims.width}
+    resizeHeight={200}
+    resizeWidth={152}
+    resizeDepth={3}
+    autorender={true}
+    useCustomShadersToResize = {false}
+    /> 
  ```
 
 ### Use a modal for the live detection
