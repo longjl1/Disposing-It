@@ -74,7 +74,7 @@ import { cameraWithTensors } from '@tensorflow/tfjs-react-native';
   }
 ```
 ## Reference
-[js.tensorflow](https://js.tensorflow.org/api_react_native/0.2.1/)
+[TFJS for react-native](https://js.tensorflow.org/api_react_native/0.2.1/)
 
 ## Usage
 
