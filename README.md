@@ -1,5 +1,6 @@
 # Disposing-It
-A mobile application that allows users to scan items they want to dispose of with their camera. With AR + AI, the items will be detected, and tell the user how to dispose of their item, basd on Tensorflow.js/ MobileNet and AR frameworks for React Native
+@UC Irvine Class of 2022
+A mobile application that allows users to scan items they want to dispose of with their camera. With AR + AI, the items will be detected, and tell the user how to dispose of their item, based on Tensorflow.js/ MobileNet and AR frameworks for React Native
 
 ## Project vision statement
 “To increase the general knowledge and frequency of proper disposal habits”
